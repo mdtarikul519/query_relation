@@ -22,12 +22,12 @@ class CrudController extends Controller
          
      $data->title = request()->title;
      $data->description = request()->description;
-     $data->gender = request()->gender;
+     $data->grnder = request()->grnder;
      $data->role  = request()->role;
      $data->image = Storage::put('/crud_image', request()->file('image'));
      $data->save();
 
-     $data->bobby = json_encode(request()->hobby);
+     $data->hobby = json_encode(request()->hobby);
      $data->slug = (rand('100000','999999').$data->id). "" .rand('100','999');
      $data->save();
      return redirect()->route('dashboard.crud.view');

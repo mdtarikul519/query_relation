@@ -42,16 +42,16 @@
                             <div class="form-group ">
                                 <label for="">Gender</label>
                                 <label for="male">
-                                    <input type="radio" value="male" id="male" name="gender">
+                                    <input type="radio" value="male" id="male" name="grnder">
                                     Male
                                 </label>
                                 <label for="female">
-                                    <input type="radio" value="female" id="female" name="gender">
+                                    <input type="radio" value="female" id="female" name="grnder">
                                     Female
                                 </label>
                                 <label for="others">
-                                    <input type="radio" value="others" id="others" name="gender">
-                                    Male
+                                    <input type="radio" value="others" id="others" name="grnder">
+                                    others
                                 </label>
                             </div>
     
