@@ -29,6 +29,11 @@ Route::get('/recycle_bin', [WebsiteController::class, 'recycle_bin']);
 Route::get('/restore/{id}', [WebsiteController::class, 'restore']);
 
 
+Route::get('/blog_test', [WebsiteController::class, 'blog_test']);
+Route::get('/delete_blog_test/{id}', [WebsiteController::class, 'delete_blog_test']);
+Route::get('/restore_blog_test/{id}', [WebsiteController::class, 'restore_blog_test']);
+
+
 Route::get('/about', [WebsiteController::class, 'about'])->name('website.about');;
 
 route::group(['prfix' => 'admin', 'Middleware' => ['auth'], 'namespace' => 'admin'], function () {
@@ -106,6 +111,17 @@ Route::group( ['prefix'=>'testmonial','namespace'=>'Admin' ], function(){
                
             Route::get('/index', 'RelationController@index')->name('dashboard.relation.index');
   });
+
+  //crud and Relation
+
+    Route::group(['prefix' =>'crud', 'namespace'=>'Admin'], function(){
+           
+        Route::get('/create', 'CrudController@create');
+        Route::post('/store', 'CrudController@store')->name('dashboard.crud.store');
+        Route::get('/view', 'CrudController@view')->name('dashboard.crud.view');
+    });
+
+    
 
 
 

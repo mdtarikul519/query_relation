@@ -21,7 +21,7 @@
 
                                  <td>
                                     @if($item->user)
-                                    {{ $item->user->user_id }}
+                                    {{ $item->user->name }}
                                     @endif
                                  </td>
                               </tr>

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\About;
+use App\Models\Image;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,6 +22,8 @@ class DatabaseSeeder extends Seeder
         $this->call(BannerSeeder::class);
         $this->call(PhoneSeeder::class);
         $this->call(UserSeeder::class);
-        
+        $this->call(RoleSeeder::class);  
+        $this->call(HobbySeeder::class);  
+        $this->call(ImageSeeder::class);
     }
 }
