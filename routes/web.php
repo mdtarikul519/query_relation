@@ -119,9 +119,28 @@ Route::group( ['prefix'=>'testmonial','namespace'=>'Admin' ], function(){
         Route::get('/create', 'CrudController@create');
         Route::post('/store', 'CrudController@store')->name('dashboard.crud.store');
         Route::get('/view', 'CrudController@view')->name('dashboard.crud.view');
+        Route::get('/edit/{id}', 'CrudController@edit')->name('dashboard.crud.edit');
+        Route::post('/update/{id}', 'CrudController@update')->name('dashboard.crud.update');
+        Route::get('/delete/{id}', 'CrudController@delete')->name('dashboard.crud.delete');
+
+
+        Route::get('/srarch', 'CrudController@search')->name('dashboard.crud.search');
+        Route::get('/last_month', 'CrudController@last_month')->name('dashboard.crud.last_month');
     });
 
-    
+
+    Route::group(['prefix' => 'bus','namespace' =>'Admin'], function(){
+          route::get('/store','BusController@store')->name('bus.store');
+          route::get('/view','BusController@view')->name('bus.view');
+    });
+
+    Route::group(['prefix' => 'fuites','namespace' =>'Admin'], function(){
+        // route::get('/store','BusController@store')->name('bus.store');
+        route::get('/view','FruitesController@view')->name('fruites.view');
+  });
+
+
+
 
 
 

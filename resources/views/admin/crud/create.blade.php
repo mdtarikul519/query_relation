@@ -20,23 +20,12 @@
     
                             <div class="form-group">
                                 <label for="">hobby :</label>
-                                <label for="gardening">
-                                    <input type="checkbox" value="gardening" id="gardening" name="hobby[]">
-                                    gardening
-                                </label>
-    
-                                <label for="reading">
-                                    <input type="checkbox" value="reading"   id="reading" name="hobby[]">
-                                    reading
-                                </label>
-                                <label for="swiming">
-                                    <input type="checkbox" value="swiming"  id="swiming" name="hobby[]">
-                                    swiming
-                                </label>
-                                <label for="playing">
-                                    <input type="checkbox" value="playing"  id="playing" name="hobby[]">
-                                    playing
-                                </label>
+                                  @foreach ($hobbies as $data)
+                                    <label for="gardening{{ $data->id }}">
+                                      <input type="checkbox" value=" {{ $data->id }}" id="gardening{{ $data->id }}" name="hobby[]">
+                                       {{ $data->name }}
+                                    </label>
+                                    @endforeach
                             </div>
     
                             <div class="form-group ">

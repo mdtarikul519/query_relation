@@ -25,5 +25,9 @@ class DatabaseSeeder extends Seeder
         $this->call(RoleSeeder::class);  
         $this->call(HobbySeeder::class);  
         $this->call(ImageSeeder::class);
+        $this->call(BusSeeder::class);
+        $this->call(DriverSeeder::class);
+        $this->call(FruitesSeeder::class);
+        $this->call(ShopSeeder::class);
     }
 }
